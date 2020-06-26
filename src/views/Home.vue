@@ -1,6 +1,6 @@
 <template>
   <main class="main-section">
-    <div class="main-card" v-for="(discussion, index) in discussions" :key="index">
+    <div class="main-card" v-for="discussion in discussions" :key="discussion.title">
       <div class="likes">
         <font-awesome-icon icon="arrow-up" />
         <p>65</p>
@@ -8,7 +8,7 @@
       </div>
 
       <div class="card">
-        <router-link :to="{ name: 'Discuss', params: { slug: discussion.slug } }">
+        <router-link :to="{ name:'Discuss', params: { slug:discussion.slug } }">
           <div class="card-header">
             <h4>{{ discussion.question }}</h4>
             <span class="badge">Question</span>
@@ -40,9 +40,8 @@
 
 <script>
 import store from "@/store.js";
-
 export default {
-  name: "MainSection",
+  name: "Home",
   data() {
     return {
       discussions: store.discussions
@@ -51,12 +50,17 @@ export default {
 };
 </script>
 
+
 <style scoped>
 .main-section {
   grid-area: main-section;
   background: #fcfcfc 0% 0% no-repeat padding-box;
   border-radius: 10px;
   opacity: 1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .main-card,

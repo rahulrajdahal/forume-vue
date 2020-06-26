@@ -1,10 +1,12 @@
 <template>
   <div>
     <nav class="navbar">
-      <div class="logo">
-        <font-awesome-icon icon="wallet" class="wallet" />
-        <h2>Forume</h2>
-      </div>
+      <router-link to="/">
+        <div class="logo">
+          <font-awesome-icon icon="wallet" class="wallet" />
+          <h2>Forume</h2>
+        </div>
+      </router-link>
 
       <div class="search">
         <font-awesome-icon icon="search" class="search-icon" />
@@ -26,6 +28,7 @@ export default {
 </script>
 
 <style scoped>
+
 .navbar {
   display: flex;
   justify-content: space-evenly;

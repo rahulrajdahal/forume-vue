@@ -3,7 +3,7 @@
     <nav-bar />
     <div class="wrapper">
       <aside-menu class="menu" />
-      <main-section class="main-section" />
+      <router-view class="main-section" />
       <aside-users class="users" />
     </div>
   </div>
@@ -12,27 +12,23 @@
 <script>
 import NavBar from "./components/NavBar.vue";
 import AsideMenu from "./components/AsideMenu.vue";
-import MainSection from "./components/MainSection.vue";
 import AsideUsers from "./components/AsideUsers.vue";
-
 export default {
   name: "App",
   components: {
     "nav-bar": NavBar,
     "aside-menu": AsideMenu,
-    "main-section": MainSection,
     "aside-users": AsideUsers
   }
 };
 </script>
 
 <style scoped>
-@font-face {
-  font-family: CircularStd;
-  src: url(./assets/CircularStd-Book.ttf);
-}
-
 #app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
   font-family: "CircularStd";
   box-sizing: border-box;
   margin: 0;
@@ -41,6 +37,10 @@ export default {
   opacity: 1;
 }
 
+@font-face {
+  font-family: CircularStd;
+  src: url(./assets/CircularStd-Book.ttf);
+}
 .wrapper {
   display: grid;
   grid-template-areas: "menu main-section users";
@@ -49,15 +49,12 @@ export default {
   grid-gap: 1rem;
   padding: 2rem 0;
 }
-
 .menu {
   grid-area: menu;
 }
-
 .main-section {
   grid-area: main-section;
 }
-
 .users {
   grid-area: users;
 }
