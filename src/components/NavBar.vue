@@ -45,6 +45,7 @@ a {
   justify-content: space-between;
   align-items: center;
   opacity: 1;
+  color: #3d5af1;
 }
 
 .wallet {

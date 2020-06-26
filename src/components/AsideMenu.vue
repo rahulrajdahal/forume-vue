@@ -1,6 +1,6 @@
 <template>
   <aside class="menu">
-    <h3>MENU</h3>
+    <h3 class="menuStyle">MENU</h3>
 
     <ul class="menu-links">
       <li class="menu-link">
@@ -37,6 +37,10 @@ export default {
   align-items: center;
   justify-content: flex-start;
   color: #8b8b8b;
+}
+
+.menuStyle{
+  font-size: 0.8rem;
 }
 
 .menu-link {

@@ -11,7 +11,7 @@
         <router-link :to="{ name:'Discuss', params: { slug: discussion.slug } }">
           <div class="card-header">
             <h4>{{ discussion.question }}</h4>
-            <span class="badge">Question</span>
+            <span class="badge">QUESTION</span>
           </div>
         </router-link>
 
@@ -23,14 +23,14 @@
           <div class="author">
             <img src="../assets/user.png" alt class="nav-img" />
             <p>
-              Postd by:
-              <b>{{ discussion.author }}</b>
+              Posted by:
+              <b class="authorName">{{ discussion.author }}</b>
             </p>
             <div class="time">12hrs ago</div>
           </div>
 
           <div class="views">
-            <font-awesome-icon icon="tv" />60+
+            <font-awesome-icon icon="comment-alt" /> 60+
           </div>
         </div>
       </div>
@@ -64,21 +64,39 @@ a {
   color: inherit;
 }
 
+p{
+  line-height: 1.5;
+}
+
+h4{
+  font-size: 1.5rem;
+}
+
 .main-card,
 .reply-main-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
   margin-bottom: 2rem;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 10px;
   opacity: 1;
+  box-shadow: 0px 15px 45px #e7e7e7;
 }
 
 .likes {
   align-self: flex-start;
   margin-right: 1rem;
+}
+
+.likes p{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.authorName{
+  color:#3d5af1;
 }
 
 .card-header {
@@ -123,7 +141,7 @@ a {
 }
 
 .badge {
-  padding: 0.2rem;
+  padding: 7px 15px 5px 15px;
   background: #3d5af1 0% 0% no-repeat padding-box;
   border-radius: 3px;
   opacity: 1;
@@ -132,5 +150,6 @@ a {
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
+  font-size: 0.8rem;
 }
 </style>
