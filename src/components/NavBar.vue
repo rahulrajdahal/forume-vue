@@ -28,7 +28,6 @@ export default {
 </script>
 
 <style scoped>
-
 .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -37,7 +36,10 @@ export default {
   box-shadow: 0px 1px 15px #00000017;
   opacity: 1;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .logo {
   display: flex;
   justify-content: space-between;

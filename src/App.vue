@@ -37,6 +37,7 @@ export default {
   opacity: 1;
 }
 
+
 @font-face {
   font-family: CircularStd;
   src: url(./assets/CircularStd-Book.ttf);
