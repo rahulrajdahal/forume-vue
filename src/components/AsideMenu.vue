@@ -1,6 +1,6 @@
 <template>
   <aside class="menu">
-    <h3>Menu</h3>
+    <h3>MENU</h3>
 
     <ul class="menu-links">
       <li class="menu-link">
@@ -16,7 +16,7 @@
         <b class="topic">My Topics</b>
       </li>
       <li class="menu-link">
-        <font-awesome-icon icon="tv" />
+        <font-awesome-icon icon="comment-alt" />
         <b class="answer">My Answers</b>
       </li>
     </ul>

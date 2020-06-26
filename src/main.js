@@ -12,6 +12,7 @@ import {
     faTv,
     faArrowUp,
     faArrowDown,
+    faCommentAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import router from './router'
@@ -25,7 +26,8 @@ library.add(
     faCompass,
     faTv,
     faArrowUp,
-    faArrowDown
+    faArrowDown,
+    faCommentAlt
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
