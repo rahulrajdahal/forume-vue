@@ -2,9 +2,9 @@
   <main class="main-section">
     <div class="main-card">
       <div class="likes">
-        <i class="fa fa-arrow-up"></i>
+        <font-awesome-icon icon="arrow-up" />
         <p>65</p>
-        <i class="fa fa-arrow-down"></i>
+        <font-awesome-icon icon="arrow-down" />
       </div>
 
       <div class="card">
@@ -18,14 +18,14 @@
         </div>
 
         <div class="reply-card-footer">
-          <div class="reply-main-card">
+          <div v-for="(reply,index) in discussion.replies" :key="index" class="reply-main-card">
             <div class="reply-likes">
-              <i class="fa fa-arrow-up"></i>
+              <font-awesome-icon icon="arrow-up" />
               <p>65</p>
-              <i class="fa fa-arrow-down"></i>
+              <font-awesome-icon icon="arrow-down" />
             </div>
 
-            <div v-for="(reply,index) in discussion.replies" :key="index" class="card">
+            <div class="card">
               <div class="card-header">
                 <div class="reply-author">
                   <!-- <img src="{{ asset($reply->user->avatar)}}" alt="" class="nav-img" /> -->
@@ -60,6 +60,12 @@ export default {
   data() {
     return {};
   },
+  props: {
+    slug: {
+      type: String,
+      required: true
+    }
+  },
   computed: {
     discussion() {
       return store.discussions.find(
@@ -78,7 +84,17 @@ export default {
   opacity: 1;
 }
 
-.main-card,
+.main-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+
 .reply-main-card {
   display: flex;
   justify-content: space-between;
@@ -138,6 +154,7 @@ export default {
 
 .reply-card-footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;

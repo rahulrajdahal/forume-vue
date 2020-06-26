@@ -8,7 +8,7 @@
       </div>
 
       <div class="card">
-        <router-link :to="{ name:'Discuss', params: { slug:discussion.slug } }">
+        <router-link :to="{ name:'Discuss', params: { slug: discussion.slug } }">
           <div class="card-header">
             <h4>{{ discussion.question }}</h4>
             <span class="badge">Question</span>
@@ -40,6 +40,7 @@
 
 <script>
 import store from "@/store.js";
+
 export default {
   name: "Home",
   data() {
